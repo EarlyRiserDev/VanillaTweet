@@ -1,0 +1,14 @@
+<html>
+<body>
+	<form method = 'POST' action = "{% url 'Article:CreateArticle' %}">
+		{% csrf_token %} 
+<br />
+  Write your article here upto 200 chars: <textArea id = "postText" placeholder = "Write your post here" name="postText" maxLength='200' rows='4' cols ='50'/>
+</textArea>
+<br / >
+<br />
+<input type="submit" value="Post">
+
+	
+</body>	
+</html>

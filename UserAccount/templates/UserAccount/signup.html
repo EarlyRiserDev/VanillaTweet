@@ -1,0 +1,21 @@
+<html>
+<body>
+	{% if error%}
+	{{error}} 
+	{% endif%}
+	<a href="{% url 'Article:Home'%}" > Home </a>
+<h1>Create your account </h1>
+	<form method = 'POST' action = "{% url 'UserAccount:signup' %}">
+		{% csrf_token %} 
+<br />
+  User name: <input type="text" id = "username" placeholder = "username" name="username" />
+<br>
+  Email address: <input type="text" id = "email" placeholder = "email" name="email" />
+<br>
+  Password: <input type="password" id = "password" placeholder = "password" name="password" />
+<br / >
+<br />
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
